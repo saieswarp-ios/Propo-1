@@ -7,6 +7,6 @@
 import Foundation
 struct AppData {
 
-    static let yourName = "Rahul"
+    static let yourName = "Mahesh"
     static let herName = "Riya"
 }
