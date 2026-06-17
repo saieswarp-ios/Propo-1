@@ -54,9 +54,12 @@ struct ProposalView: View {
                     noOffset = CGSize(
                         width: .random(in: -150...150),
                         height: .random(in: -250...250)
+                      
                     )
+                   
                 }
                 .offset(noOffset)
+             
             }
         }
     }

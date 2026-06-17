@@ -8,5 +8,5 @@ import Foundation
 struct AppData {
 
     static let yourName = "Rahul"
-    static let herName = "Priya"
+    static let herName = "Riya"
 }
