@@ -20,7 +20,7 @@ struct CelebrationView: View {
 
             VStack(spacing: 30) {
 
-                Text("SHE SAID YES ❤️")
+                Text("YOU SAID YES ❤️")
                     .font(.system(size: 40))
                     .bold()
                     .foregroundColor(.white)
@@ -39,7 +39,7 @@ struct CelebrationView: View {
             trigger += 1
 
             withAnimation(
-                .easeInOut(duration: 1)
+                .easeInOut(duration: 5)
                 .repeatForever(autoreverses: true)
             ) {
                 scale = 1.2

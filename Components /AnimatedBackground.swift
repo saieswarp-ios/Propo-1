@@ -23,7 +23,7 @@ struct AnimatedBackground: View {
         )
         .ignoresSafeArea()
         .animation(
-            .easeInOut(duration: 6)
+            .easeInOut(duration: 4)
                 .repeatForever(),
             value: animate
         )
@@ -31,4 +31,7 @@ struct AnimatedBackground: View {
             animate = true
         }
     }
+}
+#Preview {
+    AnimatedBackground()
 }

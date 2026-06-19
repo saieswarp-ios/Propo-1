@@ -1,10 +1,3 @@
-//
-//  ProposalView.swift
-//  Propo-1
-//
-//  Created by IOS DEV on 17/06/26.
-//
-
 import SwiftUI
 import UIKit
 
@@ -22,20 +15,20 @@ struct ProposalView: View {
 
             VStack(spacing: 30) {
 
-               
                 VStack(spacing: 15) {
 
                     Image(systemName: "heart.circle.fill")
                         .font(.system(size: 100))
                         .foregroundColor(.pink)
 
-                    Text("\(AppData.herName),Will You Be Mine Forever?")
+                    Text("\(AppData.herName), Will You Be Mine Forever?")
                         .font(.largeTitle)
                         .bold()
                         .multilineTextAlignment(.center)
                         .foregroundColor(.white)
                 }
-                    
+
+                // YES BUTTON
                 Button("YES ❤️") {
 
                     UIImpactFeedbackGenerator(
@@ -43,24 +36,38 @@ struct ProposalView: View {
                     ).impactOccurred()
 
                     yesAction()
-
                 }
                 .padding()
-                .background(.green)
+                .frame(width: 200)
+                .background(.blue)
+                .foregroundColor(.white)
                 .clipShape(Capsule())
 
+                // NO BUTTON
                 Button("NO 😭") {
 
-                    noOffset = CGSize(
-                        width: .random(in: -150...150),
-                        height: .random(in: -250...250)
-                      
-                    )
-                   
+                    withAnimation(.snappy) {
+
+                        noOffset = CGSize(
+                            width: .random(in: -150...150),
+                            height: .random(in: -250...250)
+                        )
+                    }
                 }
-                .offset(noOffset)
-             
+                .padding()
+                .frame(width: 200)
+                .background(.red)
+                .foregroundColor(.white)
+                .clipShape(Capsule())
+                .offset(noOffset)   // MUST BE LAST
             }
+            .padding()
         }
+    }
+}
+
+#Preview {
+    ProposalView {
+        print("YES tapped")
     }
 }
